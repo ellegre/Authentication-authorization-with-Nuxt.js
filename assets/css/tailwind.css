@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+.input {
+  @apply border-gray-300 w-full rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500;
+}
+
