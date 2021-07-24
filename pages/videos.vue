@@ -1,7 +1,7 @@
 <template>
-  <h1>Main page
-
-  </h1>
+  <div>
+    <nuxt-child />
+  </div>
 </template>
 
 <script>

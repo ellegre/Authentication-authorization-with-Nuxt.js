@@ -1,7 +1,7 @@
 <template>
-  <h1>Main page
-
-  </h1>
+  <div class="bg-blue-400">
+    <nuxt />
+  </div>
 </template>
 
 <script>

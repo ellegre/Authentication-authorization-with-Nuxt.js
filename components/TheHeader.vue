@@ -10,6 +10,7 @@
         <div v-else>
           <nuxt-link to="/login">Login</nuxt-link>
           <nuxt-link to="/register">Register</nuxt-link>
+          <nuxt-link to="/">Home</nuxt-link>
         </div>
       </div>
     </div>

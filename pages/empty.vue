@@ -1,11 +1,12 @@
 <template>
-  <h1>Main page
-
-  </h1>
+  <div>
+    <h1>EMPTY</h1>
+  </div>
 </template>
 
 <script>
 export default {
+  layout: 'empty'
 
 }
 </script>

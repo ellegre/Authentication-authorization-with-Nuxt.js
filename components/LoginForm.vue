@@ -19,7 +19,6 @@
           Login
         </button>
       </div>
-
     </form>
     <p class="text-center text-gray-500 text-xs">
       &copy;2021 ellegre. All rights reserved.
@@ -27,9 +26,9 @@
   </div>
 </template>
 <script>
-// import { mapState } from 'vuex'
-// export default {
-//   computed: mapState(['users'])
 
-// }
-// </script>
+export default {
+
+}
+
+</script>

@@ -10,7 +10,7 @@ export const mutations = {
 
 // export const actions = {
 //   nuxtServerInit({ commit }) {
-//     return this.$axios.$get('http://localhost:3000/users/')
+//     return this.$axios.$get('http://localhost:4000/users/')
 //     .then((response) => {
 //       commit('SET_USERS', response)
 //     })
