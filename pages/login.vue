@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
     <h1 class="text-center font-bold sm:text-2xl">Welcome to My account</h1>
       <p class="text-center text-gray-500">
       No account?

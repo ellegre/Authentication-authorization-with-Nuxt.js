@@ -1,29 +1,18 @@
 <template>
   <div>
-    <nuxt-child v-bind:video="video" />
+    <nuxt-child :video="video" />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      videos: [
-        {
-          id: 1,
-          name: "Very first",
-        },
-        {
-          id: 2,
-          name: "Brilliant day",
-        },
-        {
-          id: 3,
-          name: "Sun in the water",
-        }
-      ]
-    }
-  },
+  // async asyncData ({ $axios, params }) {
+  //   const response = await $axios.get(`/videos/${params.id}`)
+  //   const video = response.data
+  //   return {
+  //     video
+  //   }
+  // },
   computed: {
     video() {
       return this.videos.find(v => v.id.toString() === this.$route.params.id.toString())

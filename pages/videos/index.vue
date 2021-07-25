@@ -8,29 +8,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  data() {
+  async asyncData() {
+    try {
+      const api = 'http://localhost:3000/videos'
+      const videos = await axios.get(api).then((res) => {
+        return res.data
+      })
+      return { videos }
+    } catch (error) {
+      return { error }
+    }
+  },
+    data() {
     return {
-      videos: [
-        {
-          id: 1,
-          name: "Very first",
-        },
-        {
-          id: 2,
-          name: "Brilliant day",
-        },
-        {
-          id: 3,
-          name: "Sun in the water",
-        }
-      ]
+      videos: []
     }
   }
-
 }
 </script>
 
-<style>
-
-</style>
