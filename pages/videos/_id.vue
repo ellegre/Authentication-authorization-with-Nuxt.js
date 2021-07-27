@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   head() {
     return {
@@ -12,9 +13,14 @@ export default {
       titleTemplate: `%s ${this.video.name} - Nuxt.js`
     }
   },
-  async asyncData({$axios, params}) {
+  async asyncData({$axios, params, store}) {
     const video = await $axios.$get(`/videos/${params.id}`)
-    return { video }
+    store.commit('SET_CURRENT_VIDEO', video)
+  },
+  computed: {
+   ...mapState({
+      video: 'currentVideo'
+    })
   }
 }
 </script>
