@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-account',
+    title: 'Authorization and Authentification in Nuxt.js App',
     htmlAttrs: {
       lang: 'en'
     },
@@ -46,7 +46,10 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:3000',
+    proxyHeaders: false
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

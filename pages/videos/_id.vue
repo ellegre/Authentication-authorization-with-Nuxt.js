@@ -6,21 +6,15 @@
 
 <script>
 export default {
-  // async asyncData ({ $axios, params }) {
-  //   const response = await $axios.get(`/videos/${params.id}`)
-  //   const video = response.data
-  //   return {
-  //     video
-  //   }
-  // },
-  computed: {
-    video() {
-      return this.videos.find(v => v.id.toString() === this.$route.params.id.toString())
+  head() {
+    return {
+      title: '',
+      titleTemplate: `%s ${this.video.name} - Nuxt.js`
     }
+  },
+  async asyncData({$axios, params}) {
+    const video = await $axios.$get(`/videos/${params.id}`)
+    return { video }
   }
 }
 </script>
-
-<style>
-
-</style>

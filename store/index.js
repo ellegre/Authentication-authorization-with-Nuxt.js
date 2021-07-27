@@ -1,18 +1,10 @@
 export const state = () => ({
-  users: []
+  videos: []
 })
 
 export const mutations = {
-  SET_USERS(state, users) {
-    state.users = users
+  SET_VIDEOS(state, videos) {
+    state.videos = videos
   }
 }
 
-// export const actions = {
-//   nuxtServerInit({ commit }) {
-//     return this.$axios.$get('http://localhost:4000/users/')
-//     .then((response) => {
-//       commit('SET_USERS', response)
-//     })
-//   }
-// }
