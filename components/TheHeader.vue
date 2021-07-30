@@ -10,7 +10,10 @@
         <div v-else>
           <nuxt-link to="/login">Login</nuxt-link>
           <nuxt-link to="/register">Register</nuxt-link>
-          <nuxt-link to="/">Home</nuxt-link>
+          <div>
+            {{currentUser.name}}
+          </div>
+          <button @click="logoutUser">Logout</button>
         </div>
       </div>
     </div>
@@ -18,11 +21,15 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
 export default {
   data () {
     return {
       showMenu: false
     }
+  },
+  computed: {
+    ...mapState(['currentUser'])
   },
   watch: {
     '$route' (to, from) {
@@ -32,6 +39,9 @@ export default {
   methods: {
     toggleShowMenu () {
       this.showMenu = !this.showMenu
+    },
+    logoutUser() {
+      this.$store.dispatch('logoutUser')
     }
   }
 }

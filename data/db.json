@@ -1,7 +1,54 @@
 {
   "videos": [
-    {"id":"16", "name":"Intro to NuxtJs"},
-    {"id":"1", "name":"Intro to VueJS"},
-    {"id":"71", "name":"Advanced techniques for Library X"}
+    {
+      "id": "16",
+      "name": "Intro to NuxtJs"
+    },
+    {
+      "id": "1",
+      "name": "Intro to VueJS"
+    },
+    {
+      "id": "71",
+      "name": "Advanced techniques for Library X"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "password": "532156"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "password": "565656"
+    },
+    {
+      "username": "fff",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "username": "goog",
+      "password": "9999",
+      "id": 6
+    }
   ]
 }

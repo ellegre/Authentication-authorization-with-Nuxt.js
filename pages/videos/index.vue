@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="italic text-2xl mb-5">List of video</h1>
+    <h1 class="italic text-2xl mb-5">All videos</h1>
     <div v-for="video in $store.state.videos" :key="video.id">
       <nuxt-link :to="`/videos/${video.id}`">{{ video.name}}</nuxt-link>
     </div>

@@ -5,17 +5,32 @@
         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
           Username
         </label>
-        <input id="username"  class="input" type="text" placeholder="Username">
+        <input
+          v-model="loginInfo.username"
+          id="username"
+          class="input"
+          type="text"
+          placeholder="Username"
+        >
       </div>
       <div class="mb-6">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
           Password
         </label>
-        <input id="password" class="input" type="password" placeholder="*************">
+        <input
+          v-model="loginInfo.password"
+          id="password"
+          class="input"
+          type="password"
+          placeholder="*************"
+        >
         <p class="text-red-500 text-xs italic">Please enter a password.</p>
       </div>
       <div class="flex items-center justify-between">
-        <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+          @click="loginUser"
+        >
           Login
         </button>
       </div>
@@ -28,6 +43,19 @@
 <script>
 
 export default {
+  data() {
+    return {
+      loginInfo: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    loginUser() {
+      this.$store.dispatch('loginUser', this.loginInfo)
+    }
+  }
 
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader />
-    <div class="mt-10 mx-auto max-w-5xl bg-gray-300 text-center">
+    <div class="mt-10 mx-auto max-w-5xl text-center">
       <Nuxt />
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-
+  // middleware: 'load-videos'
 }
 </script>
 
